@@ -37,6 +37,14 @@ def button_subtract():
     f_num = int(first_number)
     screen.delete(0, tkinter.END)
 
+def button_multiply():
+    first_number = screen.get()
+    global f_num
+    global math
+    math = "multiplication"
+    f_num = int(first_number)
+    screen.delete(0, tkinter.END)
+
 def button_equal():
     second_number = screen.get()
     screen.delete(0, tkinter.END)
@@ -44,6 +52,8 @@ def button_equal():
         screen.insert(0, f_num + int(second_number))
     if math == "subtraction":
         screen.insert(0, f_num - int(second_number))
+    if math == "multiplication":
+        screen.insert(0, f_num * int(second_number))
 
 
 # Defining the buttons and placing them on the screen
@@ -58,6 +68,7 @@ button_subtract = tkinter.Button(root, text="-", padx=31, pady=20, command=butto
 button_4 = tkinter.Button(root, text="4", padx=40, pady=20, command=lambda: button_click(4)).grid(row=3, column=1)
 button_5 = tkinter.Button(root, text="5", padx=40, pady=20, command=lambda: button_click(5)).grid(row=3, column=2)
 button_6 = tkinter.Button(root, text="6", padx=40, pady=20, command=lambda: button_click(6)).grid(row=3, column=3)
+button_multiply = tkinter.Button(root, text="×", padx=30, pady=20, command=button_multiply).grid(row=3, column=4)
 
 button_1 = tkinter.Button(root, text="1", padx=40, pady=20, command=lambda: button_click(1)).grid(row=4, column=1)
 button_2 = tkinter.Button(root, text="2", padx=40, pady=20, command=lambda: button_click(2)).grid(row=4, column=2)
