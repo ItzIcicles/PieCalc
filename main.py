@@ -26,7 +26,7 @@ def button_add():
     global f_num
     global math
     math = "addition"
-    f_num = int(first_number)
+    f_num = float(first_number)
     screen.delete(0, tkinter.END)
 
 def button_subtract():
@@ -34,7 +34,7 @@ def button_subtract():
     global f_num
     global math
     math = "subtraction"
-    f_num = int(first_number)
+    f_num = float(first_number)
     screen.delete(0, tkinter.END)
 
 def button_multiply():
@@ -42,7 +42,7 @@ def button_multiply():
     global f_num
     global math
     math = "multiplication"
-    f_num = int(first_number)
+    f_num = float(first_number)
     screen.delete(0, tkinter.END)
 
 def button_divide():
@@ -50,20 +50,20 @@ def button_divide():
     global f_num
     global math
     math = "division"
-    f_num = int(first_number)
+    f_num = float(first_number)
     screen.delete(0, tkinter.END)
 
 def button_equal():
     second_number = screen.get()
     screen.delete(0, tkinter.END)
     if math == "addition":
-        screen.insert(0, f_num + int(second_number))
+        screen.insert(0, f_num + float(second_number))
     if math == "subtraction":
-        screen.insert(0, f_num - int(second_number))
+        screen.insert(0, f_num - float(second_number))
     if math == "multiplication":
-        screen.insert(0, f_num * int(second_number))
+        screen.insert(0, f_num * float(second_number))
     if math == "division":
-        screen.insert(0, f_num / int(second_number))
+        screen.insert(0, f_num / float(second_number))
 
 
 # Defining the buttons and placing them on the screen
